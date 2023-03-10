@@ -79,4 +79,8 @@
   (setq lsp-ui-doc-enable t)
   (setq lsp-ui-doc-show-with-cursor t)
 
+(after! calendar
+  (setq calendar-week-start-day 1)
+)
+
 )
