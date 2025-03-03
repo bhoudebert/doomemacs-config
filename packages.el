@@ -62,3 +62,10 @@
 
 (package! copilot
   :recipe (:host github :repo "copilot-emacs/copilot.el" :files ("*.el")))
+
+;; (package! ellama)
+
+;; (package! default-text-scale)
+
+(package! drag-stuff :pin "6d06d846cd37c052d79acd0f372c13006aa7e7c8")
+(package! expand-region :pin "e8f4e0fe9c9a80a6a26e2b438502aba9a799d580")

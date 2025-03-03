@@ -34,6 +34,18 @@
 ;; `load-theme' function. This is the default:
 (setq doom-theme 'doom-one)
 
+;;(setq doom-font (font-spec :family "Fira Code" :size 16))
+
+;; (use-package! default-text-scale
+;;   :config
+;;   (default-text-scale-mode 0.1))
+
+;; (setq doom-font (font-spec :family "DejaVu Sans Mono" :size 13))
+;; (setq doom-font (font-spec :size 14))
+
+;; (setq doom-font (font-spec :family "DejaVu Sans Mono" :height 13))
+;; (set-face-attribute 'default nil :height 129)
+
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
 (setq display-line-numbers-type t)
@@ -130,3 +142,21 @@
               ("TAB" . 'copilot-accept-completion)
               ("C-TAB" . 'copilot-accept-completion-by-word)
               ("C-<tab>" . 'copilot-accept-completion-by-word)))
+
+;; (use-package! ellama
+;;   :init
+;;   (setq ellama-language "English")
+;;   :config
+;;   ;;(require 'll-ollama)
+;;   (setq ellama-provider
+;;         (make-llm-ollama
+;;          :chat-model "codellama"
+;;          :embedding-model "codellama")))
+
+(use-package! drag-stuff
+  :defer t
+  :init
+  (map! "<M-up>"    #'drag-stuff-up
+        "<M-down>"  #'drag-stuff-down
+        "<M-left>"  #'drag-stuff-left
+        "<M-right>" #'drag-stuff-right))
